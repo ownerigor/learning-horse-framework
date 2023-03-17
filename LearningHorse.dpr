@@ -21,7 +21,7 @@ begin
   THorse.Get('/users',
   procedure(Req: THorseRequest; Res: THorseResponse)
   begin
-    Res.Send<TJSONArray>(Users);
+    Res.Send<TJSONAncestor>(Users.Clone);
   end);
 
   THorse.Post('/users',
