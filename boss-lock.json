@@ -10,6 +10,14 @@
 			"failed": false,
 			"changed": false
 		},
+		"github.com/hashload/horse-basic-auth": {
+			"name": "horse-basic-auth",
+			"version": "1.2.3",
+			"hash": "525c71503c467b1db394d33d04bbc966",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
 		"github.com/hashload/jhonson": {
 			"name": "jhonson",
 			"version": "1.1.5",

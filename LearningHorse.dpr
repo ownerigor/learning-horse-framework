@@ -9,7 +9,8 @@ uses
   Horse.Jhonson,
   Horse.Commons,
   System.JSON,
-  System.SysUtils;
+  System.SysUtils,
+  Horse.BasicAuthentication;
 
 var
   Users: TJSONArray;
@@ -17,6 +18,11 @@ var
 begin
   Users := TJSONArray.Create;
   THorse.Use(Jhonson());
+  THorse.Use(HorseBasicAuthentication(
+    function(const AUsername, APassword: string): Boolean
+    begin
+      Result := AUsername.Equals('igor') and APassword.Equals('123');
+    end));
 
   THorse.Get('/users',
   procedure(Req: THorseRequest; Res: THorseResponse)
